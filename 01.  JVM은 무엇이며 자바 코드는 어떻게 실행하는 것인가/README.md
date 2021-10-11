@@ -31,7 +31,7 @@ JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴
 
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
 
-### 1.2.2. 자바 버전
+### 1.2.3. 자바 버전
 Java SE : Java Standard Edition _ 웹개발과 무관한 버젼 
 Java EE : Java EnterPrise Edition _ 웹개발에 필요한 버전
 
