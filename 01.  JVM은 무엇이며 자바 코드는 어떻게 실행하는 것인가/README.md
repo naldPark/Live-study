@@ -11,3 +11,4 @@ JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
 ### 1.2.1. 자바프로그램의 실행과정
 	1. 메모리 할당.
   
+![image](https://user-images.githubusercontent.com/81441317/136736758-16dc037d-91d7-49f1-a0d5-0749f67e1af3.png)
