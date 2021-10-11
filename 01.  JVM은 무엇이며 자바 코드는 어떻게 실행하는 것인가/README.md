@@ -28,4 +28,9 @@ JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
 JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)
 JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경
 JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)
+
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
+
+### 1.2.2. 자바 버전
+Java SE : Java Standard Edition _ 웹개발과 무관한 버젼 
+Java EE : Java EnterPrise Edition _ 웹개발에 
