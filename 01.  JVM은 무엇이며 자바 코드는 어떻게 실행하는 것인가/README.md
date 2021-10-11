@@ -2,9 +2,9 @@
 
 # 1. JVM
 ## 1.1. JVM이란?
-JVM이란 Java Virtual Machine, 자바 가상 머신의 약자를 따서 줄여 부르는 용어이다.
-JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 들여 자바 API와 함께 실행하는 것이다.  그리고 JVM은 JAVA와 OS사이에서 중개자 역할을 수행하여
-JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
+JVM이란 Java Virtual Machine, 자바 가상 머신의 약자를 따서 줄여 부르는 용어이다.   
+JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 들여 자바 API와 함께 실행하는 것이다.  그리고 JVM은 JAVA와 OS사이에서 중개자 역할을 수행하여   
+JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.   
 그리고 가장 중요한 메모리관리, Garbage collection을 수행한다. 
 
 ## 1.2. 가상머신
@@ -25,14 +25,14 @@ JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
 ![image](https://user-images.githubusercontent.com/81441317/136736758-16dc037d-91d7-49f1-a0d5-0749f67e1af3.png)
 
 ### 1.2.2. 자바 개발 환경
-JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)
-JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경
-JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)
+JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)   
+JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경   
+JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)   
 
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
 
 ### 1.2.3. 자바 버전
-Java SE : Java Standard Edition _ 웹개발과 무관한 버젼 
+Java SE : Java Standard Edition _ 웹개발과 무관한 버젼    
 Java EE : Java EnterPrise Edition _ 웹개발에 필요한 버전
 
 
