@@ -16,5 +16,10 @@ JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
 	4. 로딩된 class파일들은 Execution engine을 통해 해석된다.
 	5. 해석된 바이트코드는 Runtime Data Areas에 배치되어 실질적인 수행이 이루어지게 된다.
 	6. 이러한 실행과정 속에서 JVM은 필요에 따라 Thread Synchronization과 GC같은 관리작업을 수행한다.
+	-------------------------------------------------------------------------------------------------
+	[쉬운설명]
+	1. 즉 코드 (.java 확장자 파일) 를 짠다 => 명령어를 나열한다
+	2. .java 파일을 Java Compiler가 Java Byte Code인 .class 파일로 변환한다.
+	3. .class를 가지고 JVM이 설치된 운영체제(리눅스, 윈도우 등)에 맞게 해석하고 실행한다.
   
 ![image](https://user-images.githubusercontent.com/81441317/136736758-16dc037d-91d7-49f1-a0d5-0749f67e1af3.png)
