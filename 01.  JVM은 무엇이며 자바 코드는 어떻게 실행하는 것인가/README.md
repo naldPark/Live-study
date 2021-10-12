@@ -3,9 +3,10 @@
 # 1. JVM
 ## 1.1. JVM이란?
 JVM이란 Java Virtual Machine, 자바 가상 머신의 약자를 따서 줄여 부르는 용어이다.   
-JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 들여 자바 API와 함께 실행하는 것이다.  그리고 JVM은 JAVA와 OS사이에서 중개자 역할을 수행하여   
-JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.   
+JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 들여 자바 API와 함께 실행하는 것이다.  그리고 JVM은 JAVA와 OS사이에서 중개자 역할을 수행하여 JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.   
 그리고 가장 중요한 메모리관리, Garbage collection을 수행한다. 
+[간단요약]
+
 
 ## 1.2. 가상머신
 ### 1.2.1. 자바프로그램의 실행과정
@@ -21,12 +22,16 @@ JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.
 	1. 즉 코드 (.java 확장자 파일) 를 짠다 => 명령어를 나열한다
 	2. .java 파일을 Java Compiler가 Java Byte Code인 .class 파일로 변환한다.
 	3. .class를 가지고 JVM이 설치된 운영체제(리눅스, 윈도우 등)에 맞게 해석하고 실행한다.
+	- 컴퓨터는 0과1(바이너리코드)밖에 모르는 바보다. 그래서 1차적으로 .class파일로 컴파일 하고 JVM을 통해 바이너리코드로 변환한다.
+	- C언어의 경우 운영체제 별로 컴파일러가 있지만 Java는 JVM이 있기 떄문에 운영체제에 맞게 번역해 줌
+	- C / C++은 컴파일 플랫폼과 타겟 플랫폼이 다를 경우, 프로그램이 동작하지 않는다. 그래서 크로스 컴파일이 필요
+          크로스 컴파일 ( Cross Compile ) : 다른 환경으로 컴파일 하는 것 (리눅스 환경에서 윈도우로 컴파일)
   
 ![image](https://user-images.githubusercontent.com/81441317/136736758-16dc037d-91d7-49f1-a0d5-0749f67e1af3.png)
 
 ### 1.2.2. 자바 개발 환경
 JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)   
-JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경   
+JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경 (라이브러리 파일 등)
 JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)   
 
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
@@ -35,4 +40,9 @@ JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴
 Java SE : Java Standard Edition _ 웹개발과 무관한 버젼    
 Java EE : Java EnterPrise Edition _ 웹개발에 필요한 버전
 
+### 1.2.4. JDK 종류  
+Oracle : 오라클에서 만든 JDK, 개인에게 무료, 기업용은 유료   
+OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료   
+참고: JAVA 8 부터 람다 지원 / LTS(Long Time Support)은 장기간에 걸처 지원하는 버전으로 안정적임 
 
+﻿
