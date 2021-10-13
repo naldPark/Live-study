@@ -60,6 +60,16 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 
 ### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
+#### 부트스트랩 클래스 로더: 
+> JVM을 기동할 때 생성되며, Object 클래스들을 비롯하여 자바 API들을 로드한다. 다른 클래스 로더와 달리 자바가 아니라 네이티브 코드로 구현되어 있다.
+#### 익스텐션 클래스 로더(Extension Class Loader): 
+> 기본 자바 API를 제외한 확장 클래스들을 로드한다. 다양한 보안 확장 기능등을 여기에서 로드하게 된다.
+#### 시스템 클래스 로더(System Class Loader): 
+> 부트스트랩 클래스 로더와 익스텐션 클래스 로더가 JVM 자체의 구성 요소들을 로드하는 것이라 한다면, 시스템 클래스 로더는 애플리케이션의 클래스들을 로그한다고 할 수 있다. 사용자가 지정한 $CLASSPATH 내의 클래스들을 로드한다.
+> 사용자 정의 클래스 로더(User-Defined Class Loader): 애플리케이션 사용자가 직접 코드 상에서 생성해서 사용하는 클래스 로더이다.
+
+
+출처: https://happy-coding-day.tistory.com/125 [humans above the code]
 
 ### 1.3.4. Class Loader 계층구조
 ![image](https://user-images.githubusercontent.com/81441317/137052908-bb175d20-5da5-4533-84b6-66c494665015.png)
