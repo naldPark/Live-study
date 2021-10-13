@@ -66,7 +66,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
-*****
+
 #### Method Area : 
 > 클래스 로더가 클래스파일을 읽어오면 클래스 정보를 파싱해서 해당 영역에 저장 (클래스 정보, 변수정보,  static으로 선언한 변수가 저장)   
 #### Heap : 
@@ -77,7 +77,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > 스레드가 어떤 부분을 어떤 명령어로 수행할 지 저장   
 #### Native Method Stacks: 
 > Java ByteCode가 아닌 다른언어로 작성된 메서드 ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
-*****
+
 
 ### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
