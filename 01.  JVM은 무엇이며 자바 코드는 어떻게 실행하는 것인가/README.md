@@ -106,6 +106,14 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > 시스템 클래스 로더는 애플리케이션의 클래스들을 로드한다고 할 수 있다. 사용자가 지정한 $CLASSPATH 내의 클래스들을 로드한다.   
 > 사용자 정의 클래스 로더(User-Defined Class Loader): 애플리케이션 사용자가 직접 코드 상에서 생성해서 사용하는 클래스 로더이다.   
 > 즉, 사용자가 생성한 모든 Classloader의 Parent임   
+##### [쉬운설명]
+> ClassLoaderRunner가 자기자신을 로딩한 애플리케이션 클래스로더에게 Internal 클래스로딩을 요청   
+> 요청을 받은 애플리케이션클래스로더는 Internal을 익스텐션클래스로더한테 넘김   
+> 익스텐션클래스로더는 부트스트랩 클래스로더한테 넘김   
+> 최상위에있는 부트스트랩 클래스로더는 rt.jar에서 Internal을 찾아서 있으면 반환   
+> 없으면 익스텐션로더가 jre/lib/ext나 java.ext.dirs 환경변수로 지정된 폴더에서 찾아서 있으면 반환   
+> 없으면 애플리케이션 클래스로더가 클래스패스에서 Internal을 찾아서 반환   
+> 없으면 ClassNotFoundException 에러가 발생   
 
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
