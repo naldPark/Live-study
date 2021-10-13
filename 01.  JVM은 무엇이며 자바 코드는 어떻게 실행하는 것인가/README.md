@@ -61,9 +61,9 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
 #### Loading : 클래스를 읽어오는 과정
-> .class 파일을 읽어 내용에 따라 적절한 바이너리 데이터를 생성하고, 메서드 영역에 저장    
-> 메서드 영역:  Type정보(class, interface, enum) Method, 변수, FQCN이 저장되는 영역   
-> 앞에서 설명한, ClassLoader의 계층구조 및 Delegation원칙에 따라서 Root ClassLoader에서부터 load가 필요한 class를 찾는다    
+> .class 파일을 읽어 내용에 따라 적절한 바이너리 데이터를 생성하고, 메서드 영역*에 저장    
+> *메서드 영역:  Type정보(class, interface, enum) Method, 변수, FQCN이 저장되는 영역   
+> Root ClassLoader에서부터 load가 필요한 class를 찾는다    
 > 로딩이 끝나면, Type 정보로 저장된 Class Type Object를 생성하여 Heap 영역에 저장    
 #### Linking : 레퍼런스를 연결하는 과정 
 > 로딩 단계로부터 생성된 바이너리 데이터를 JVM의 런타임 데이터로 합치는 과정    
