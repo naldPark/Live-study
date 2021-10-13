@@ -1,14 +1,16 @@
 
 
 # 1. JVM
+<br>
 ## 1.1. JVM이란?
 JVM이란 Java Virtual Machine, 자바 가상 머신의 약자를 따서 줄여 부르는 용어이다.   
 JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 들여 자바 API와 함께 실행하는 것이다.  그리고 JVM은 JAVA와 OS사이에서 중개자 역할을 수행하여 JAVA가 OS에 구애받지 않고 재사용을 가능하게 해준다.   
 그리고 가장 중요한 메모리관리, Garbage collection을 수행한다. 
 [간단요약]
 
-
+<br>
 ## 1.2. 가상머신
+<br>
 ### 1.2.1. 자바프로그램의 실행과정
 	1. 프로그램이 실행되면 JVM은 OS로부터 이 프로그램이 필요로 하는 메모리를 할당받는다.
 	   JVM은 이 메모리를 용도에 따라 여러 영역으로 나누어 관리한다.
@@ -28,38 +30,39 @@ JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 
           크로스 컴파일 ( Cross Compile ) : 다른 환경으로 컴파일 하는 것 (리눅스 환경에서 윈도우로 컴파일)
   
 ![image](https://user-images.githubusercontent.com/81441317/136736758-16dc037d-91d7-49f1-a0d5-0749f67e1af3.png)
-
+<br>
 ### 1.2.2. 자바 개발 환경
 JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)   
 JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경 (라이브러리 파일 등)
 JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)   
 
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
-
+<br>
 ### 1.2.3. 자바 버전
 Java SE : Java Standard Edition _ 웹개발과 무관한 버젼    
 Java EE : Java EnterPrise Edition _ 웹개발에 필요한 버전
-
+<br>
 ### 1.2.4. JDK 종류  
 Oracle : 오라클에서 만든 JDK, 개인에게 무료, 기업용은 유료   
 OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료   
 참고: JAVA 8 부터 람다 지원 / LTS(Long Time Support)은 장기간에 걸처 지원하는 버전으로 안정적임 
 
-
+<br>
 ## 1.3. JVM의 구조
+<br>
 ### 1.3.1. JVM의 구성요소
 ![image](https://user-images.githubusercontent.com/81441317/137052829-2951af7c-e6d5-41d3-9d13-62e564c2b442.png)
-
+<br>
 ### 1.3.2. [참고] 컴파일 단계
 
 ![image](https://user-images.githubusercontent.com/81441317/137052851-bd39f94e-36d3-4c97-90c1-c6ff8dc3b917.png)
-
+<br>
 ### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
-
+<br>
 ### 1.3.4. Class Loader 계층구조
 ![image](https://user-images.githubusercontent.com/81441317/137052908-bb175d20-5da5-4533-84b6-66c494665015.png)
-
+<br>
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
 *****
@@ -75,7 +78,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > Java ByteCode가 아닌 다른언어로 작성된 메서드 ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
 *****
 
-
+<br>
 ### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
 
@@ -98,7 +101,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > (Heap 영역은 JVM에 의해 관리된 영역이며, Native 메모리는 OS 레벨에서 관리하는 영역으로 구분)
 
 
-
+<br>
 ### 1.3.7. Execution Engine
 ![image](https://user-images.githubusercontent.com/81441317/137052953-81698032-47f5-4dee-a240-97cfa5c7841c.png)
 #### Interpreter : 
