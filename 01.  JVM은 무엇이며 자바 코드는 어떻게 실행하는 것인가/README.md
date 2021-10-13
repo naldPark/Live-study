@@ -100,11 +100,12 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 #### Extension Class Loader:    
 > 기본 자바 API를 제외한 확장 클래스들을 로드한다. 다양한 보안 확장 기능등을 여기에서 로드하게 된다.   
 > jre/lib/ext 디렉토리에 위치한 extension 디렉토리에 class들을 loading   
+> 환경 변수로 지정된 폴더에 있는 클래스 파일을 로딩 !
 #### System Class Loader:    
 > 부트스트랩 클래스 로더와 익스텐션 클래스 로더가 JVM 자체의 구성 요소들을 로드하는 것이라 한다면,    
 > 시스템 클래스 로더는 애플리케이션의 클래스들을 로드한다고 할 수 있다. 사용자가 지정한 $CLASSPATH 내의 클래스들을 로드한다.   
 > 사용자 정의 클래스 로더(User-Defined Class Loader): 애플리케이션 사용자가 직접 코드 상에서 생성해서 사용하는 클래스 로더이다.   
-> 즉, 내가 환경변수로 지정한 경로에서 코드를 로딩 = 사용자가 생성한 모든 Classloader의 Parent임   
+> 즉, 사용자가 생성한 모든 Classloader의 Parent임   
 
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
