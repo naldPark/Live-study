@@ -63,13 +63,13 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
 *****
-Method Area : 클래스 로더가 클래스파일을 읽어오면 클래스 정보를 파싱해서 해당 영역에 저장   
+####Method Area : 클래스 로더가 클래스파일을 읽어오면 클래스 정보를 파싱해서 해당 영역에 저장   
             (클래스 정보, 변수정보,  stati으로 선언한 변수가 저장)   	    
-Heap : 프로그램을 실행하면서 생성한 모든 객체를 저장 ( ex. String, new연산으로 생성된 객체 등 )   
+####Heap : 프로그램을 실행하면서 생성한 모든 객체를 저장 ( ex. String, new연산으로 생성된 객체 등 )   
           GC (unreachable Object)의 대상이 되는 공간   	  
-Stack: 지역변수, 메서드의 매개변수, 임시적인 변수, 메서드의 정보 저장   
-PC Register: 스레드가 어떤 부분을 어떤 명령어로 수행할 지 저장   
-Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서드 ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
+####Stack: 지역변수, 메서드의 매개변수, 임시적인 변수, 메서드의 정보 저장   
+####PC Register: 스레드가 어떤 부분을 어떤 명령어로 수행할 지 저장   
+####Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서드 ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
 *****
 ![image](https://user-images.githubusercontent.com/81441317/137053381-3ce59dd7-6582-4e07-a0f2-643f05cc16ca.png)
 
@@ -77,7 +77,7 @@ Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서�
 ### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
 *****
-Young Generation :  
+####Young Generation :  
 	  Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
 		Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.      
        		그리고 참조가 사라진 Garbage Object이면 남겨 놓고 
@@ -86,11 +86,11 @@ Young Generation :  
 	Survivor:  Survivor0과 Survivor1로 구성. Eden 영역에 살아 남은 Object들이 잠시 머무르는 곳으로   
         	   Live Object들은 하나의 Survivor 영역만 사용하게 되며 이러한 과정을 Minor GC라고 함   
 
-Old Generation :
+####Old Generation :
 	새로 Heap에 할당된 Object가 들어오는 것이 아닌, Survivor 영역에서 살아남아 오랫동안 참조 되었고 앞으로도 사용될 확률이 높은 Object들을 저장하는 영역.    
 	Old Generation의 메모리가 충분하지 않으면 해당 영역에서 GC가 발생하는데 이를 Major GC라고 한다.(Tenured 영역에서 발행한 GC)   
 
-Perm:
+####Perm:
 	Class Meta 정보나 Method의 메타 정보, static 변수와 상수 정보들이 저장되는 공간.   
         JAVA8 부터 Native Memory (Metaspace *) 영역으로 이동됨   
 	* Metaspace 영역은 클래스 메타 데이터를 native 메모리에 저장하고 메모리가 부족할 경우 이를 자동으로 늘려주는 공간으로 Heap이 아닌 Native 메모리 영역으로 취급   
@@ -101,10 +101,10 @@ Perm:
 ### 1.3.7. Execution Engine
 ![image](https://user-images.githubusercontent.com/81441317/137052953-81698032-47f5-4dee-a240-97cfa5c7841c.png)
 *****
-Interpreter : 명령어를 한줄한줄 해석하면서 실행   
-JIT Complier : (Just In Time) 인터프리터의 단점을 보완하기 위한 것으로 프로그램을 실행하는 시점에서 필요한 부분만 컴파일하는 방식    
-Native Method Interface (JNI) : JVM에 실행되는 코드 중 네이티브로 실행하는 것이 있다면 해당 네이티브 코드를 호출하거나 호출될 수 있도록 만든 프레임워크   
-Native Method Libraries :  네이티브 메소드 실행에 필요한 라이브러리   
+####Interpreter : 명령어를 한줄한줄 해석하면서 실행   
+####JIT Complier : (Just In Time) 인터프리터의 단점을 보완하기 위한 것으로 프로그램을 실행하는 시점에서 필요한 부분만 컴파일하는 방식    
+####Native Method Interface (JNI) : JVM에 실행되는 코드 중 네이티브로 실행하는 것이 있다면 해당 네이티브 코드를 호출하거나 호출될 수 있도록 만든 프레임워크   
+####Native Method Libraries :  네이티브 메소드 실행에 필요한 라이브러리   
 *****
 
 
