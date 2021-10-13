@@ -79,11 +79,13 @@ Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서�
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
 ```
 Young Generation :  
- 	Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면 Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.   
-       		그리고 참조가 사라진 Garbage Object이면 남겨 놓고 모든 Live Object가 Survivor 영역으로 넘어간다면 Eden 영역을 모두 청소.   
+	  Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
+		Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.      
+       		그리고 참조가 사라진 Garbage Object이면 남겨 놓고 
+		모든 Live Object가 Survivor 영역으로 넘어가면 Eden 영역을 모두 청소.   
 
- 	Survivor:  Survivor0과 Survivor1로 구성되며 Eden 영역에 살아 남은 Object들이 잠시 머무르는 곳으로   
-        	   Live Object들은 하나의 Survivor 영역만 사용하게 되며 이러한 전반적인 과정을 Minor GC라고 함   
+	Survivor:  Survivor0과 Survivor1로 구성. Eden 영역에 살아 남은 Object들이 잠시 머무르는 곳으로   
+        	   Live Object들은 하나의 Survivor 영역만 사용하게 되며 이러한 과정을 Minor GC라고 함   
 
 Old Generation :
 	새로 Heap에 할당된 Object가 들어오는 것이 아닌, Survivor 영역에서 살아남아 오랫동안 참조 되었고 앞으로도 사용될 확률이 높은 Object들을 저장하는 영역.    
