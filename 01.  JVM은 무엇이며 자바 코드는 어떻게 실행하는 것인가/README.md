@@ -61,29 +61,28 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
 #### Loading : 클래스를 읽어오는 과정
-> .class 파일을 읽어 내용에 따라 적절한 바이너리 데이터를 생성하고, 메서드 영역에 저장
-> 메서드 영역: 추후에 jvm의 구성 중, 데이터 영역에서 다룰 내용으로 자세한 설명은 생략 
->                 Type정보(class, interface, enum) Method, 변수, FQCN이 저장되는 영역 
-> 앞에서 설명한, ClassLoader의 계층구조 및 Delegation원칙에 따라서 Root ClassLoader에서부터 load가 필요한 class를 찾는다
-> 로딩이 끝나면, Type 정보로 저장된 Class Type Object를 생성하여 Heap 영역에 저장
+> .class 파일을 읽어 내용에 따라 적절한 바이너리 데이터를 생성하고, 메서드 영역에 저장    
+> 메서드 영역:  Type정보(class, interface, enum) Method, 변수, FQCN이 저장되는 영역   
+> 앞에서 설명한, ClassLoader의 계층구조 및 Delegation원칙에 따라서 Root ClassLoader에서부터 load가 필요한 class를 찾는다    
+> 로딩이 끝나면, Type 정보로 저장된 Class Type Object를 생성하여 Heap 영역에 저장    
 #### Linking : 레퍼런스를 연결하는 과정 
-> 로딩 단계로부터 생성된 바이너리 데이터를 JVM의 런타임 데이터로 합치는 과정
+> 로딩 단계로부터 생성된 바이너리 데이터를 JVM의 런타임 데이터로 합치는 과정    
 > 이 단계는 3가지 단계로 나뉜다 
 > 
 > ##### Verifying
-> .class 파일의 정확성을 보장하기 위한 단계
-> 파일이 적절한 포맷인지, 유효한 컴파일러에 의해 생성되었는지를 확인
-> 검증이 실패한 경우 런타임 에러 (java.lang.VerifyError) 발생
+> .class 파일의 정확성을 보장하기 위한 단계   
+> 파일이 적절한 포맷인지, 유효한 컴파일러에 의해 생성되었는지를 확인   
+> 검증이 실패한 경우 런타임 에러 (java.lang.VerifyError) 발생   
 > ##### Preparing
-> 클래스 변수(static 변수)와 기본값에 필요한 메모리를 준비하는 과정
+> 클래스 변수(static 변수)와 기본값에 필요한 메모리를 준비하는 과정    
 > 
 > ##### Resolving
-> 심볼릭 메모리 레퍼런스를 메모리 영역에 존재하는 실제 레퍼런스로 교체
-> optional 한 단계 ( 설정에 따라서 동작 유무가 정해짐)
+> 심볼릭 메모리 레퍼런스를 메모리 영역에 존재하는 실제 레퍼런스로 교체   
+> optional 한 단계 ( 설정에 따라서 동작 유무가 정해짐)    
 
 #### Initializing : static값을 초기화 및 변수에 할당
-> 윗 단계인 Linking의 Preparing 단계에서 확보한 메모리 영역에 static 값을 할당
-> 클래스의 static 값들을 할당
+> 윗 단계인 Linking의 Preparing 단계에서 확보한 메모리 영역에 static 값을 할당   
+> 클래스의 static 값들을 할당   
 
 
 #### 실제 위의 3가지 단계가 실행되는 java의 ClassLoader API
