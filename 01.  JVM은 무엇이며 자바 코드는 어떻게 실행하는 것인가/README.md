@@ -69,15 +69,18 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 #### Linking
 > 로딩 단계로부터 생성된 바이너리 데이터를 JVM의 런타임 데이터로 합치는 과정
 > 이 단계는 3가지 단계로 나뉜다 
-> Verifying
+> 
+> ##### Verifying
 > .class 파일의 정확성을 보장하기 위한 단계
 > 파일이 적절한 포맷인지, 유효한 컴파일러에 의해 생성되었는지를 확인
 > 검증이 실패한 경우 런타임 에러 (java.lang.VerifyError) 발생
-> Preparing
+> ##### Preparing
 > 클래스 변수(static 변수)와 기본값에 필요한 메모리를 준비하는 과정
-> Resolving
+> 
+> ##### Resolving
 > 심볼릭 메모리 레퍼런스를 메모리 영역에 존재하는 실제 레퍼런스로 교체
 > optional 한 단계 ( 설정에 따라서 동작 유무가 정해짐)
+
 #### Initializing
 > 윗 단계인 Linking의 Preparing 단계에서 확보한 메모리 영역에 static 값을 할당
 > 클래스의 static 값들을 할당
