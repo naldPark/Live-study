@@ -57,6 +57,13 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.2. [참고] 컴파일 단계
 
 ![image](https://user-images.githubusercontent.com/81441317/137052851-bd39f94e-36d3-4c97-90c1-c6ff8dc3b917.png)
+#### [쉬운설명]   
+> 어휘분석에서 가장 작은 단위로 나눔 (ex. h,e,l,l,o)   
+> 구문분석에서 문법이 맞는지 확인 하고 이상이 없으면 parse tree 생성(어휘분석에서 나눈것들의 연결 tree)   
+> 의미분석   
+> 중간코드 생성에서 기계어에 가까운 코드로된 .class생성 그래서 중간코드다   
+> 최적화: 효율적으로 속도를 높이고 코드 크기를 낮추는 작업들을 함    
+> 기계어로 변신    
 
 ### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
