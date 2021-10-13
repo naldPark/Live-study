@@ -101,12 +101,12 @@ Perm:
 
 ### 1.3.7. Execution Engine
 ![image](https://user-images.githubusercontent.com/81441317/137052953-81698032-47f5-4dee-a240-97cfa5c7841c.png)
-```
+*****
 Interpreter : 명령어를 한줄한줄 해석하면서 실행   
 JIT Complier : (Just In Time) 인터프리터의 단점을 보완하기 위한 것으로 프로그램을 실행하는 시점에서 필요한 부분만 컴파일하는 방식    
 Native Method Interface (JNI) : JVM에 실행되는 코드 중 네이티브로 실행하는 것이 있다면 해당 네이티브 코드를 호출하거나 호출될 수 있도록 만든 프레임워크   
 Native Method Libraries :  네이티브 메소드 실행에 필요한 라이브러리   
-````
+*****
 
 
 
