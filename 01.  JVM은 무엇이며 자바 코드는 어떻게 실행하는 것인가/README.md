@@ -85,6 +85,14 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > 윗 단계인 Linking의 Preparing 단계에서 확보한 메모리 영역에 static 값을 할당
 > 클래스의 static 값들을 할당
 
+
+#### 실제 위의 3가지 단계가 실행되는 java의 ClassLoader API
+
+> loadClass() : 지정된 이름을 가지는 클래스를 로드    
+> 해당 메서드 내부에서 findLoadedClass() 호출 - 이미 로드된 내역이 있는지 확인    
+> findClass() : loadClass시 load 된 class가 없을 시, load 하고자 하는 class의 이름으로 클래스 파일 탐색   
+> defineClass() : 위의 findClass메서드에서 원하는 class파일을 찾은 경우 .class 파일로부터 바이트 배열을 class객체로 변환
+
 ### 1.3.4. Class Loader 계층구조
 ![image](https://user-images.githubusercontent.com/81441317/137052908-bb175d20-5da5-4533-84b6-66c494665015.png)
 #### 부트스트랩 클래스 로더: 
