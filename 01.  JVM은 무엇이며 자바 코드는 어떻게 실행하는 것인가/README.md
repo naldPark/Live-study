@@ -74,24 +74,23 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
 
-#### Young Generation :  
-	Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
-		Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.      
-       		그리고 참조가 사라진 Garbage Object이면 남겨 놓고 
-		모든 Live Object가 Survivor 영역으로 넘어가면 Eden 영역을 모두 청소.   
+#### Young Generation : 
+> Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
+> Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.      
+> 그리고 참조가 사라진 Garbage Object이면 남겨 놓고 
+> 모든 Live Object가 Survivor 영역으로 넘어가면 Eden 영역을 모두 청소.   
+> Survivor:  Survivor0과 Survivor1로 구성. Eden 영역에 살아 남은 Object들이 잠시 머무르는 곳으로   
+> Live Object들은 하나의 Survivor 영역만 사용하게 되며 이러한 과정을 Minor GC라고 함   
 
-	Survivor:  Survivor0과 Survivor1로 구성. Eden 영역에 살아 남은 Object들이 잠시 머무르는 곳으로   
-        	   Live Object들은 하나의 Survivor 영역만 사용하게 되며 이러한 과정을 Minor GC라고 함   
+#### Old Generation : 
+> 새로 Heap에 할당된 Object가 들어오는 것이 아닌, Survivor 영역에서 살아남아 오랫동안 참조 되었고 앞으로도 사용될 확률이 높은 Object들을 저장하는 영역.       
+> Old Generation의 메모리가 충분하지 않으면 해당 영역에서 GC가 발생하는데 이를 Major GC라고 한다.(Tenured 영역에서 발행한 GC)   
 
-#### Old Generation :
-	새로 Heap에 할당된 Object가 들어오는 것이 아닌, Survivor 영역에서 살아남아 오랫동안 참조 되었고 앞으로도 사용될 확률이 높은 Object들을 저장하는 영역.    
-	Old Generation의 메모리가 충분하지 않으면 해당 영역에서 GC가 발생하는데 이를 Major GC라고 한다.(Tenured 영역에서 발행한 GC)   
-
-#### Perm:
-	Class Meta 정보나 Method의 메타 정보, static 변수와 상수 정보들이 저장되는 공간.   
-        JAVA8 부터 Native Memory (Metaspace *) 영역으로 이동됨   
-	* Metaspace 영역은 클래스 메타 데이터를 native 메모리에 저장하고 메모리가 부족할 경우 이를 자동으로 늘려주는 공간으로 Heap이 아닌 Native 메모리 영역으로 취급   
-	(Heap 영역은 JVM에 의해 관리된 영역이며, Native 메모리는 OS 레벨에서 관리하는 영역으로 구분)
+#### Perm: 
+> Class Meta 정보나 Method의 메타 정보, static 변수와 상수 정보들이 저장되는 공간.        
+> JAVA8 부터 Native Memory (Metaspace *) 영역으로 이동됨      
+> * Metaspace 영역은 클래스 메타 데이터를 native 메모리에 저장하고 메모리가 부족할 경우 이를 자동으로 늘려주는 공간으로 Heap이 아닌 Native 메모리 영역으로 취급      
+> (Heap 영역은 JVM에 의해 관리된 영역이며, Native 메모리는 OS 레벨에서 관리하는 영역으로 구분)
 
 
 
