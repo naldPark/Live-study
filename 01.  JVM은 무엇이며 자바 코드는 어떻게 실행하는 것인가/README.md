@@ -172,4 +172,4 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 > cmd를 통해 $ java .class파일명(확장자는 생략)     
 
 
-#### 참고 : https://homoefficio.github.io/2018/10/13/Java-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A1%9C%EB%8D%94-%ED%9B%91%EC%96%B4%EB%B3%B4%EA%B8%B0/
+#### 참고 : 클래스로더 관련(https://homoefficio.github.io/2018/10/13/Java-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A1%9C%EB%8D%94-%ED%9B%91%EC%96%B4%EB%B3%B4%EA%B8%B0/)
