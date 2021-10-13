@@ -96,6 +96,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ![image](https://user-images.githubusercontent.com/81441317/137052908-bb175d20-5da5-4533-84b6-66c494665015.png)
 #### Bootstrap Classloader:    
 > 최상위 계증. JVM을 기동할 때 생성되며, Object 클래스들을 비롯하여 자바 API들을 로드한다. 다른 클래스 로더와 달리 자바가 아니라 네이티브 코드로 구현되어 있다.   
+> jre/lib/rt.jar에 담긴 JDK 클래스 파일을 loading    
 #### Extension Class Loader:    
 > 기본 자바 API를 제외한 확장 클래스들을 로드한다. 다양한 보안 확장 기능등을 여기에서 로드하게 된다.   
 > jre/lib/ext 디렉토리에 위치한 extension 디렉토리에 class들을 loading   
