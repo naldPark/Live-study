@@ -63,10 +63,8 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 ### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
 *****
-#### Method Area : 클래스 로더가 클래스파일을 읽어오면 클래스 정보를 파싱해서 해당 영역에 저장   
-            (클래스 정보, 변수정보,  stati으로 선언한 변수가 저장)   	    
-#### Heap : 프로그램을 실행하면서 생성한 모든 객체를 저장 ( ex. String, new연산으로 생성된 객체 등 )   
-          GC (unreachable Object)의 대상이 되는 공간   	  
+#### Method Area : 클래스 로더가 클래스파일을 읽어오면 클래스 정보를 파싱해서 해당 영역에 저장 (클래스 정보, 변수정보,  stati으로 선언한 변수가 저장)   
+#### Heap : 프로그램을 실행하면서 생성한 모든 객체를 저장 ( ex. String, new연산으로 생성된 객체 등 )  GC (unreachable Object)의 대상이 되는 공간   
 #### Stack: 지역변수, 메서드의 매개변수, 임시적인 변수, 메서드의 정보 저장   
 #### PC Register: 스레드가 어떤 부분을 어떤 명령어로 수행할 지 저장   
 #### Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서드 ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
@@ -76,9 +74,9 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 
 ### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
-*****
+
 #### Young Generation :  
-	  Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
+	Eden: Object(객체)가 최초로 Heap에 할당되는 장소. Eden 영역이 가득 찼다면   
 		Object의 참조 여부를 파악하고 Live Object는 Survivor 영역으로 이동.      
        		그리고 참조가 사라진 Garbage Object이면 남겨 놓고 
 		모든 Live Object가 Survivor 영역으로 넘어가면 Eden 영역을 모두 청소.   
@@ -95,7 +93,7 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
         JAVA8 부터 Native Memory (Metaspace *) 영역으로 이동됨   
 	* Metaspace 영역은 클래스 메타 데이터를 native 메모리에 저장하고 메모리가 부족할 경우 이를 자동으로 늘려주는 공간으로 Heap이 아닌 Native 메모리 영역으로 취급   
 	(Heap 영역은 JVM에 의해 관리된 영역이며, Native 메모리는 OS 레벨에서 관리하는 영역으로 구분)
-*****
+
 
 
 ### 1.3.7. Execution Engine
