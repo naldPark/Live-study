@@ -78,7 +78,13 @@ Native Method Stacks: Java ByteCode가 아닌 다른언어로 작성된 메서�
 
                  ( c/c++ 등 성능향상을 목적으로 사용하는 경우가 있음 )
 		 
+```
+This is a normal paragraph:
 
+    This is a code block.
+    
+end code block.
+```
 ![image](https://user-images.githubusercontent.com/81441317/137053381-3ce59dd7-6582-4e07-a0f2-643f05cc16ca.png)
 
 
