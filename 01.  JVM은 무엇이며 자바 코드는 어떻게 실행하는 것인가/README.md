@@ -33,7 +33,7 @@ JVM의 역할은 자바 애플리케이션을 클래스 로더를 통해 읽어 
 
 ### 1.2.2. 자바 개발 환경
 JVM은 사용자의 입장인지 개발자의 입장인지에 따라 설치범위가 다름 (사용자도 설치해야함)   
-JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경 (라이브러리 파일 등)
+JRE - Java Runtime Environment(사용자) : 컴파일된 자바 프로그램을 실행시킬 수 있는 자바 환경 (라이브러리 파일 등)    
 JDK - Java Development Kit (개발자) : 자바 프로그래밍시 필요한 컴파일러 등 포함 (javac, java등)   
 
 ![image](https://user-images.githubusercontent.com/81441317/136776310-8e37e48b-a5d3-47f1-ae23-320cca814e50.png)
@@ -44,7 +44,7 @@ Java EE : Java EnterPrise Edition _ 웹개발에 필요한 버전
 
 ### 1.2.4. JDK 종류  
 Oracle : 오라클에서 만든 JDK, 개인에게 무료, 기업용은 유료   
-OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료   
+OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료     
 참고: JAVA 8 부터 람다 지원 / LTS(Long Time Support)은 장기간에 걸처 지원하는 버전으로 안정적임 
 
 ---------------------------------------
