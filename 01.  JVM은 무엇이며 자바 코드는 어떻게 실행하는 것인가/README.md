@@ -46,18 +46,27 @@ OpenJDK : Oracle JDK와 비슷한 성능, 언제나 무료
 참고: JAVA 8 부터 람다 지원 / LTS(Long Time Support)은 장기간에 걸처 지원하는 버전으로 안정적임 
 
 
-
+## 1.3. JVM의 구조
+### 1.3.1. JVM의 구성요소
 ![image](https://user-images.githubusercontent.com/81441317/137052829-2951af7c-e6d5-41d3-9d13-62e564c2b442.png)
 
+### 1.3.2. [참고] 컴파일 단계
 
 ![image](https://user-images.githubusercontent.com/81441317/137052851-bd39f94e-36d3-4c97-90c1-c6ff8dc3b917.png)
 
-
+### 1.3.3. Class Loader 로딩과정
 ![image](https://user-images.githubusercontent.com/81441317/137052870-0f75fb0b-9449-4c89-bff3-0e0ca45f512c.png)
 
+### 1.3.4. Class Loader 계층구조
 ![image](https://user-images.githubusercontent.com/81441317/137052908-bb175d20-5da5-4533-84b6-66c494665015.png)
+
+### 1.3.5. Runtime Data Areas
 ![image](https://user-images.githubusercontent.com/81441317/137052927-0d3df9ea-7f5a-4772-b5b4-073d5117a38f.png)
+
+### 1.3.6. Heap (GC가 수행되는 영역)
 ![image](https://user-images.githubusercontent.com/81441317/137052944-6047d12c-85ff-4b47-a663-922dd2f891c5.png)
+
+### 1.3.7. Execution Engine
 ![image](https://user-images.githubusercontent.com/81441317/137052953-81698032-47f5-4dee-a240-97cfa5c7841c.png)
 
 
